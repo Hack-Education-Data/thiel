@@ -1,0 +1,20 @@
+---
+layout: default
+title: Peter Thiel's Investment Firms' Investors
+---
+<h2>Peter Thiel's Investment Firms' Investors</h2>
+
+<!-- Organizations -->
+{% assign investors = site.data.investors %}
+{% assign investors = investors | sort:"Name" %}
+
+<!-- Document -->
+
+{% for investor in investors %}
+
+<ul>
+<li><strong>{{ investor.Name }}</strong> ({{ investor.Date }})</li>
+</ul>
+
+{% endfor %}
+
